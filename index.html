@@ -8,6 +8,7 @@
   </head>
   <body>
       <div class="landing">
+        <div class="header-container"></div>
       </div>
       <div class="arrow-pulse"></div>
       <a href="#start">
@@ -17,32 +18,43 @@
             </p>
         </div>
     </a>
-      <div class="lightbox"></div>
+      <div class="lightbox" id = "lightbox" onClick="closeLightbox()">
+        <div class="lightbox-container">
+            <span class="lightbox-close">
+                <img src="assets/icons/close.png">
+                <p>schließen</p>
+            </span>
+            <img src="./assets/images/illustration1.png" class="lightbox-img" id="lightbox-img"> 
+        </div>
+      </div>
+
         <div class="container">
         <section class="hello">
             <div class="hero-container appearScroll">
                 <img src="assets/images/hero_image.png" class="hero"/>
             </div>
-            <div class="social">
-                <a href="https://twitter.com/sir_tobi_" target="blank" class="twitter appearScroll">
-                    <img src="assets/social/twitter.png">
-                </a>
-                <a href="https://dribbble.com/sir_tobi_" target="blank" class="dribbble appearScroll">
-                    <img src="assets/social/dribbble.png">
-                </a>
-            </div>
+
             <div>
                 <h1 class="appearScroll title">
                     Tobias Schnackenberg.<br/>Softwaregestalter aus Bremen.
                 </h1>  
                 <p class="intro appearScroll">
-                    Moin. Ich helfe dir gerne dabei dein digitales Produkt zu erstellen oder überarbeiten. Dabei sind mir die Bereiche <b>Webdesign</b>, <b>User Experience Design</b> und <b>Gestaltung</b> besonders wichtig.
+                    Moin. Ich helfe dir gerne dabei dein digitales Produkt zu erstellen oder zu überarbeiten. Dabei sind mir die Bereiche <b>Webdesign</b>, <b>User Experience Design</b> und <b>Gestaltung</b> besonders wichtig.
                 </p>
             </div>
            
             <div class="contact">
                 <a class="contact contact-button button appearScroll">Kontakt</a>
             </div>
+
+            <div class="social">
+                    <a href="https://twitter.com/sir_tobi_" target="blank" class="twitter appearScroll">
+                        <img src="assets/social/twitter.png">
+                    </a>
+                    <a href="https://dribbble.com/sir_tobi_" target="blank" class="dribbble appearScroll">
+                        <img src="assets/social/dribbble.png">
+                    </a>
+                </div>
 
         </section>
         <section class="shopanion">
@@ -53,11 +65,11 @@
             </div>
             <div class="grid-container">
                     <div class="grid">
-                        <img src="assets/images/shopanion1.png" class="appearScroll">
-                        <img src="assets/images/shopanion2.png" class="appearScroll">
-                        <img src="assets/images/shopanion3.png" class="appearScroll">
-                        <img src="assets/images/shopanion4.png" class="appearScroll">
-                        <img src="assets/images/shopanion5.png" class="appearScroll">
+                        <img src="assets/images/shopanion1.png" class="appearScroll" id="shopanion1" onClick="showLightbox(this.id)">
+                        <img src="assets/images/shopanion2.png" class="appearScroll" id="shopanion2" onClick="showLightbox(this.id)">
+                        <img src="assets/images/shopanion3.png" class="appearScroll" id="shopanion3" onClick="showLightbox(this.id)">
+                        <img src="assets/images/shopanion4.png" class="appearScroll" id="shopanion4" onClick="showLightbox(this.id)">
+                        <img src="assets/images/shopanion5.png" class="appearScroll" id="shopanion5" onClick="showLightbox(this.id)">
                     </div>
                 </div>
                 <div>
@@ -84,11 +96,11 @@
             </div>
             <div class="grid-container">
                 <div class="grid">
-                    <img src="assets/images/illustration1.png" class="appearScroll">
-                    <img src="assets/images/illustration2.png" class="appearScroll">
-                    <img src="assets/images/illustration3.png" class="appearScroll">
-                    <img src="assets/images/illustration4.png" class="appearScroll">
-                    <img src="assets/images/illustration5.png" class="appearScroll">
+                    <img src="assets/images/illustration1.png" class="appearScroll" id="illustration1" onClick="showLightbox(this.id)">
+                    <img src="assets/images/illustration2.png" class="appearScroll" id="illustration2" onClick="showLightbox(this.id)">
+                    <img src="assets/images/illustration3.png" class="appearScroll" id="illustration3" onClick="showLightbox(this.id)">
+                    <img src="assets/images/illustration4.png" class="appearScroll" id="illustration4" onClick="showLightbox(this.id)">
+                    <img src="assets/images/illustration5.png" class="appearScroll" id="illustration5" onClick="showLightbox(this.id)">
                 </div>
             </div>
             <div>
@@ -112,9 +124,9 @@
             </div>
             <div class="grid-container-thirds">
                 <div class="grid-thirds">
-                    <img src="assets/images/webdesign1.png" class="appearScroll">
-                    <img src="assets/images/webdesign2.png" class="appearScroll">
-                    <img src="assets/images/webdesign3.png" class="appearScroll">
+                    <img src="assets/images/webdesign1.png" class="appearScroll" id="webdesign1" onClick="showLightbox(this.id)">
+                    <img src="assets/images/webdesign2.png" class="appearScroll" id="webdesign2" onClick="showLightbox(this.id)">
+                    <img src="assets/images/webdesign3.png" class="appearScroll" id="webdesign3" onClick="showLightbox(this.id)">
                 </div>
             </div>
             <div>
@@ -149,31 +161,13 @@
 
     </div>
     <footer>
-        <div class="container">
-                <div class="bird-container bird-container--one">
-                    <div class="bird bird--one"></div>
-                </div>
-                
-                <div class="bird-container bird-container--two">
-                    <div class="bird bird--two"></div>
-                </div>
-                
-                <div class="bird-container bird-container--three">
-                    <div class="bird bird--three"></div>
-                </div>
-                
-                <div class="bird-container bird-container--four">
-                    <div class="bird bird--four"></div>
-                </div>
-                
-            </div>
-            
-            <div class="bottom-row">
-                <p>Gestaltet von Tobias Schnackenberg.</p>
-                <p>
-                    <a href="impressum.html">Impressum</a>
-                </p>
-            </div>
+        <div class="footer-container"></div>
+        <div class="bottom-row">
+            <p>Gestaltet von Tobias Schnackenberg.</p>
+            <p>
+                <a href="impressum.html">Impressum</a>
+            </p>
+        </div>
     </footer>
     <script language="javascript" type="text/javascript" src="src/script.js"></script>
   </body>
