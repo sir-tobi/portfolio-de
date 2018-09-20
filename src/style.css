@@ -201,6 +201,10 @@ a {
     transition: all 0.3s linear;
 }
 
+.contact {
+    margin-top: 4em;
+}
+
 .hero-container {
     z-index: 2;
     position: absolute;
