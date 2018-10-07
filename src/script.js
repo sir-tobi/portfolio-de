@@ -59,3 +59,8 @@ document.onkeydown = function(evt) {
         closeLightbox();
     }
 };
+
+function sendMail() {
+    var link = "mailto:moin@tobiasschnackenberg.de";
+    window.location.href = link;
+}
