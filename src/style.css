@@ -42,6 +42,7 @@ body {
     width: 100vw;
     height: 100vh;
     top: 0;
+    left: 0;
     position: absolute;
     z-index: -30;
     background-position-y: 100%;
@@ -217,8 +218,9 @@ a {
 
 .mail-icon {
     height: 1.2em;
-    margin: 0 0 0 0;
-    padding: 0 0.8em 0 0;
+    margin: 0;
+    vertical-align: bottom;
+    padding: 0 0.8em 3px 0;
 }
 
 .button:hover {
@@ -272,14 +274,14 @@ footer .bottom-row {
 }
 
 footer p {
-    color: #333;
+    color: #fff;
     font-size: 0.8em;
     margin: 0;
     padding: 0;
 }
 
 footer a {
-    color: #333;
+    color: #33FDD9;
 }
 
 .grid {
