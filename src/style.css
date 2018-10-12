@@ -101,7 +101,7 @@ body {
     display: inline-block;
 }
 
-.lightbox-close:hover, .lightbox-close:focus, .lightbox-close:active {
+.lightbox-close:hover, .lightbox-close:active, .lightbox-close:focus {
     cursor: pointer;
 }
 
@@ -223,7 +223,7 @@ a {
     padding: 0 0.8em 3px 0;
 }
 
-.button:hover {
+.button:hover, .button:focus, .button:active {
     background-color: #39DDC0;
     box-shadow: none;
     transition: all 0.3s linear;
@@ -256,7 +256,7 @@ a {
     transition:opacity 1s;
 }
 
-.social img:hover {
+.social img:hover, .social img:focus, .social img:active {
     transition: all 0.3s linear;
     filter: invert(30%);
 }
@@ -349,19 +349,15 @@ footer a {
   }
 
   .arrow-pulse {
-    position: absolute;
-    top: 88%;
-    left: 0;
-    right: 0;
-    height: 35px;
     width: 200px;
     text-align: center; 
     margin: 0 auto 0 auto;
-    border-radius: 50%;
     z-index: 100;
+    position: relative; left: 50%;
+    transform: translateX(-50%);   
 }
 
-.arrow-pulse:hover {
+.arrow-pulse:hover, .arrow-pulse:focus, .arrow-pulse:active {
     cursor: pointer;
     filter: invert(30%);
 }
@@ -411,7 +407,7 @@ footer a {
     }
 
     section div {
-        margin: 1em;
+        margin: 1.5em;
     }
 
     h1 {
