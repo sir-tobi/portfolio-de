@@ -38,22 +38,6 @@ body {
     margin: 0;
 }
 
-.landing {
-    width: 100vw;
-    height: 100vh;
-    top: 0;
-    left: 0;
-    position: absolute;
-    z-index: -30;
-    background-position-y: 100%;
-    background-repeat: repeat-x;
-    background-color: #7314C7;
-    /*background-image: url(../assets/images/footer.png);*/
-    background-size: 50% auto;
-    box-shadow: 0 0 150px #33333377;
-    /*background-color: #FFE6EF;*/
-}
-
 .lightbox {
     visibility: hidden;
     width: 100vw;
@@ -194,6 +178,13 @@ a {
     font-weight: 700;
 }
 
+.landing {
+    margin: 0;
+    padding: 0;
+    background-color: #7314C7;
+    box-shadow: 0 0 50px #333333aa;
+}
+
 .hello {
     height: 100vh;
     display: table-cell;
@@ -237,7 +228,6 @@ a {
     margin: 0 auto;
     padding: 0;
     width: 100%;
-    z-index: -10;
 }
 
 .hero {
