@@ -1,6 +1,6 @@
 window.onload = function () {
-    let allearOnScrollElements = document.querySelectorAll('.appearScroll');
-    allearOnScrollElements.forEach(element => {
+    let appearOnScrollElements = document.querySelectorAll('.appearScroll');
+    appearOnScrollElements.forEach(element => {
         if (isScrolledIntoView(element)) {
             element.classList.toggle('appearScroll');
         }
@@ -8,8 +8,8 @@ window.onload = function () {
 }
 
 window.onscroll = function () {
-    let allearOnScrollElements = document.querySelectorAll('.appearScroll');
-    allearOnScrollElements.forEach(element => {
+    let appearOnScrollElements = document.querySelectorAll('.appearScroll'); 
+    appearOnScrollElements.forEach(element => {
         if (isScrolledIntoView(element)) {
             element.classList.toggle('appearScroll');
         }
