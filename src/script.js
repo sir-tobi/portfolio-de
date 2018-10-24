@@ -1,3 +1,5 @@
+let lightsOn = true;
+
 window.onload = function () {
     let appearOnScrollElements = document.querySelectorAll('.appearScroll');
     appearOnScrollElements.forEach(element => {
@@ -5,6 +7,20 @@ window.onload = function () {
             element.classList.toggle('appearScroll');
         }
     });
+
+    let now = moment();
+    let hourToCheck = (now.day() !== 0)?18:00;
+    let dateToCheck = now.hour(hourToCheck).minute(00);
+  
+    if (moment().isAfter(dateToCheck)) {
+        toggleLight();
+    }
+
+    setTimeout(function() {
+        // XHR to request a JS and a CSS
+        var xhr = new XMLHttpRequest();
+        new Image().src = './assets/images/hero_image_2.png';
+    }, 1000);
 }
 
 window.onscroll = function () {
@@ -28,6 +44,21 @@ function isScrolledIntoView (el) {
     return isVisible;
 }
 
+function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for(var i = 0; i <ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
 
 // Lightbox
 let lightbox = document.getElementById("lightbox");
@@ -64,3 +95,19 @@ function sendMail() {
     var link = "mailto:moin@tobiasschnackenberg.de";
     window.location.href = link;
 }
+
+function toggleLight() {
+    document.getElementById("landing").classList.toggle("light-off-landing");
+    document.getElementById("body").classList.toggle("light-off-body");
+    document.getElementById("hero").classList.toggle("hidden");
+    document.getElementById("hero-night").classList.toggle("hidden");
+    if (lightsOn) {
+        document.getElementById("mail-icon").src = "./assets/images/mail2.png";
+        document.getElementById("mail-icon2").src = "./assets/images/mail2.png";
+    } else {
+        document.getElementById("mail-icon").src = "./assets/images/mail.png";
+        document.getElementById("mail-icon2").src = "./assets/images/mail.png";
+    }
+    lightsOn = !lightsOn;
+}
+

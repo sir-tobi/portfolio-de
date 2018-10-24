@@ -21,8 +21,7 @@
     <link rel="stylesheet" type="text/css" href="src/style.css">
     <link rel="icon" type="image/png" href="(favicon.png">
   </head>
-  <body>
-
+  <body id="body">
       <div class="lightbox" id = "lightbox" onClick="closeLightbox()">
         <div class="lightbox-container">
             <span class="lightbox-close">
@@ -32,16 +31,13 @@
             <img src="./assets/images/illustration1.png" class="lightbox-img" id="lightbox-img"> 
         </div>
       </div>
-      <div class="landing">
+      </div>
+      <div class="landing" id="landing">
         <div class="container">
         <section class="hello">
-            <div class="hero-container appearScroll">
-                <img src="assets/images/hero_image.png" class="hero"/>
-            </div>
-
             <div>
                 <h1 class="appearScroll title">
-                    Moin! Ich bin Tobias.<br/>Ich bin ein Webgestalter<br/>aus Bremen.
+                    Moin! Ich bin Tobias.<br/>Und ich bin Webgestalter<br/>aus Bremen.
                 </h1>  
                 <p class="intro appearScroll">
                         Du hast ein cooles Projekt, bei dem Du Unterstützung in den Bereichen <b>Design</b> oder <b>Web-Entwicklung</b> benötigst?
@@ -50,7 +46,7 @@
                 </p>
             </div>
             <div class="contact">
-                <a class="contact contact-button button appearScroll"><img class="mail-icon" src="assets/images/mail.png">Moin mich an</a>
+                <a class="contact contact-button button appearScroll"><img class="mail-icon" id ="mail-icon2" src="assets/images/mail.png">Moin mich an</a>
             </div>
 
             <div class="social">
@@ -67,6 +63,11 @@
                 </a>
             </div>
         </section>
+        <div class="hero-container appearScroll">
+            <img src="assets/images/light.png" class="light-switch" id ="light-switch" onClick="toggleLight()">
+            <div class="hero" id="hero"/></div>
+            <div class="hero-night hidden" id="hero-night"/></div>
+        </div>
     </div>
 </div>
 <div class="container">
@@ -159,7 +160,7 @@
 
         <section class="social-media">
             <div>
-                <h2 class="appearScroll">
+                <h2 class="appearScroll contact-heading">
                     Kontakt
                 </h2>  
                 <p class="appearScroll">
@@ -169,7 +170,7 @@
             </div>
 
             <div class="contact">
-                 <a class="contact contact-button button appearScroll"><img class="mail-icon" src="assets/images/mail.png">Schreib mir</a>
+                 <a class="contact contact-button button appearScroll"><img class="mail-icon" id ="mail-icon" src="assets/images/mail.png">Schreib mir</a>
             </div>
 
             <div class="social">
@@ -192,6 +193,7 @@
             </p>
         </div>
     </footer>
+    <script language="javascript" type="text/javascript" src="src/moment.js"></script>
     <script language="javascript" type="text/javascript" src="src/script.js"></script>
   </body>
 </html>

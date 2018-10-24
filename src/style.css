@@ -35,6 +35,7 @@ body {
 }
 
 .hello {
+    width: 50%;
     margin: 0;
 }
 
@@ -125,6 +126,7 @@ h1 {
 }
 
 .title {
+    z-index: 20;
     margin: 0;
     color: #33FDD9;
 }
@@ -146,10 +148,10 @@ b {
 }
 
 .intro {
+    z-index: 20;
     font-size: 1.5em;
     line-height: 1.7em;
     color: #33FDD9;
-    padding-right: 50%;
 }
 
 .intro b {
@@ -185,6 +187,31 @@ a {
     box-shadow: 0 0 50px #333333aa;
 }
 
+.light-off-landing {
+    background-color: #1A1260;
+}
+
+.light-off-landing {
+    background-color: #1A1260;
+}
+
+.light-off-body h1, .light-off-body h2, .light-off-body h3, .light-off-body .button {
+    color: #1A1260;
+}
+
+.light-off-body .title, .light-off-body .contact-heading {
+    color: #33FDD9;
+}
+
+.light-off-body .social-media {
+    background-color: #1A1260;
+}
+
+.light-off-body {
+    /*background-color: #FCC8A4;*/
+    background-color: rgb(255, 228, 211);
+}
+
 .hello {
     height: 100vh;
     display: table-cell;
@@ -194,6 +221,7 @@ a {
 }
 
 .button {
+    z-index: 20;
     font-size: 1.1em;
     color: #7314C7;
     background-color: #33FDD9;
@@ -221,22 +249,52 @@ a {
 }
 
 .hero-container {
-    z-index: 2;
-    position: absolute;
+    width: 50%;
+    height: 500px;
     display: table-cell;
-    vertical-align: middle;
     margin: 0 auto;
     padding: 0;
-    width: 100%;
+    transition: all 0.3ms linear;
 }
 
 .hero {
-    z-index: 30;
-    width: 35%;
-    opacity: 1;
-    margin: 0;
-    padding: 0;
+    height: 100%;
+    background-image: url(../assets/images/hero_image.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    transition: all 0.3ms linear;
+}
+
+.hero-night {
+    height: 100%;
+    background-image: url(../assets/images/hero_image_2.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position-y: 50%;
+    transition: all 0.3ms linear;
+}
+
+.hidden {
+    display: none;
+}
+
+.light-switch {
+    z-index: 300;
+    width: 2em;
     float: right;
+    margin-top: 50%;
+    transition: 0.3s linear;
+}
+
+.light-switch:hover {
+    cursor: pointer;
+    box-shadow: 0 0px 50px #33FDD9aa;
+    transition: 0.3s linear;
+}
+
+.social {
+    z-index: 20;
 }
 
 .social img {
@@ -385,7 +443,7 @@ footer a {
         grid-row: auto;
     }
 
-    .hero {
+    .hero-container {
         display: none;
     }
 }
@@ -448,7 +506,7 @@ footer a {
         height: auto;
     }
 
-    .hero {
+    .hero-container {
         display: none;
     }
 
