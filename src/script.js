@@ -20,6 +20,7 @@ window.onload = function () {
         // XHR to request a JS and a CSS
         var xhr = new XMLHttpRequest();
         new Image().src = './assets/images/hero_image_2.png';
+        new Image().src = './assets/images/hero_image_3.png';
     }, 1000);
 }
 

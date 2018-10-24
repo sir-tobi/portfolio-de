@@ -270,7 +270,15 @@ a {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-y: 50%;
-    transition: all 0.3ms linear;
+    animation-name: glow;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes glow {
+    0%   {background-image: url(../assets/images/hero_image_2.png);}
+    50%  {background-image: url(../assets/images/hero_image_3.png);}
+    100% {background-image: url(../assets/images/hero_image_2.png);}
 }
 
 .hidden {
