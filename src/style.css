@@ -101,6 +101,10 @@ section div {
     margin: 0 0 2em 0;
 }
 
+.contact {
+    margin-top: 4em;8
+}
+
 .social-media {
     background-color: #7314C7;
     padding: 2em;
@@ -183,6 +187,9 @@ a {
     padding: 0;
     background-color: #7314C7;
     box-shadow: 0 0 50px #333333aa;
+    /*background-image: url(../assets/images/background.png);*/
+    background-size: 100%;
+    background-repeat: no-repeat;
 }
 
 .light-off-landing {
@@ -231,6 +238,15 @@ a {
     text-align: center;
     transition: all 0.3s linear;
     transition: opacity 1s linear;
+    animation-name: glow-button;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes glow-button {
+    0%   {box-shadow: 0 0px 50px #33FDD9aa;}
+    50%  {box-shadow: 0 0px 0px #33FDD9aa;}
+    100% {box-shadow: 0 0px 50px #33FDD9aa;}
 }
 
 .mail-icon {
@@ -244,6 +260,7 @@ a {
     background-color: #39DDC0;
     box-shadow: none;
     transition: all 0.3s linear;
+    transform: scale(1.5) perspective(1px)
 }
 
 .hero-container {
@@ -270,12 +287,36 @@ a {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position-y: 50%;
-    animation-name: glow;
+    animation-name: glow-hero;
     animation-duration: 3s;
     animation-iteration-count: infinite;
 }
 
-@keyframes glow {
+.clock {
+    position: absolute;
+    width: 8em;
+    left: 2em;
+    top: 2em;
+    z-index: 20;
+}
+
+.shelf {
+    position: absolute;
+    width: 25em;
+    right: 20em;
+    top: 8em;
+    z-index: 0;
+}
+
+.plants {
+    position: absolute;
+    width: 25em;
+    bottom: 2em;
+    right: 2em;
+    z-index: 20;
+}
+
+@keyframes glow-hero {
     0%   {background-image: url(../assets/images/hero_image_2.png);}
     50%  {background-image: url(../assets/images/hero_image_3.png);}
     100% {background-image: url(../assets/images/hero_image_2.png);}
@@ -418,6 +459,10 @@ footer a {
 
 
 @media screen and (max-width: 1280px) {
+    .landing {
+        background-image: none;
+    }
+
     .container {
         width: 560px;
     }
@@ -449,12 +494,15 @@ footer a {
         grid-row: auto;
     }
 
-    .hero-container {
+    .hero-container, .clock, .shelf, .plants {
         display: none;
     }
 }
 
 @media screen and (max-width: 585px) {
+    .landing {
+        background-image: none;
+    }
 
     section {
         margin: 7em 0 0 0;
@@ -512,11 +560,23 @@ footer a {
         height: auto;
     }
 
-    .hero-container {
+    .hero-container, .clock, .shelf, .plants {
         display: none;
     }
 
     footer {
         margin: 7em 0 0 0;
+    }
+}
+
+@media screen and (max-height: 900px) {
+    .plants {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1500px) {
+    .shelf {
+        display: none;
     }
 }

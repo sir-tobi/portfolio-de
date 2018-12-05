@@ -1,7 +1,7 @@
 let lightsOn = true;
 
 window.onload = function () {
-    let appearOnScrollElements = document.querySelectorAll('.appearScroll');
+ let appearOnScrollElements = document.querySelectorAll('.appearScroll');
     appearOnScrollElements.forEach(element => {
         if (isScrolledIntoView(element)) {
             element.classList.toggle('appearScroll');
@@ -105,9 +105,13 @@ function toggleLight() {
     if (lightsOn) {
         document.getElementById("mail-icon").src = "./assets/images/mail2.png";
         document.getElementById("mail-icon2").src = "./assets/images/mail2.png";
+        document.getElementById("shelf").src = "./assets/images/shelf2.png";
+        document.getElementById("plants").src = "./assets/images/plants2.png";
     } else {
         document.getElementById("mail-icon").src = "./assets/images/mail.png";
         document.getElementById("mail-icon2").src = "./assets/images/mail.png";
+        document.getElementById("shelf").src = "./assets/images/shelf.png";
+        document.getElementById("plants").src = "./assets/images/plants.png";
     }
     lightsOn = !lightsOn;
 }
